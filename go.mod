@@ -1,4 +1,4 @@
-module github.com/swallowarc/poker-proto
+module github.com/swallowarc/porker-proto
 
 go 1.16
 
