@@ -1,0 +1,49 @@
+syntax = "proto3";
+package porker;
+
+option go_package = "porker;porker";
+
+enum Violations {
+  UNDEFINED_VIOLATION = 0;
+}
+
+enum RoomState {
+  ROOM_STATE_UNKNOWN = 0;
+  ROOM_STATE_TURN_DOWN = 1;
+  ROOM_STATE_OPEN = 2;
+}
+
+enum Point {
+  POINT_UNKNOWN = 0;
+  POINT_0 = 1;
+  POINT_HALF = 2;
+  POINT_1 = 3;
+  POINT_2 = 4;
+  POINT_3 = 5;
+  POINT_5 = 6;
+  POINT_8 = 7;
+  POINT_13 = 8;
+  POINT_21 = 9;
+
+  POINT_COFFEE = 20;
+  POINT_QUESTION = 21;
+
+  NOT_VOTE = 99;
+}
+
+message Login {
+  string login_id = 1;
+  string session_id = 2;
+}
+
+message Ballot {
+  string login_id = 1;
+  Point point = 2;
+}
+
+message PokerSituation {
+  string room_id = 1;
+  string master_login_id = 2;
+  RoomState state = 3;
+  repeated Ballot ballot = 4;
+}
