@@ -1,0 +1,13 @@
+name: porker
+description: porker protobuf.
+version: 0.0.1
+
+homepage: https://github.com/swallowarc/poker-proto
+repository: https://github.com/swallowarc/poker-proto
+
+dependencies:
+  protobuf: ^2.0.0-nullsafety.0
+  grpc: ^3.0.0
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"

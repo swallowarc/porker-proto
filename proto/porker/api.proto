@@ -1,0 +1,75 @@
+syntax = "proto3";
+package porker;
+
+option go_package = "porker;porker";
+
+import "porker/resource.proto";
+
+service PorkerService {
+  rpc Login(LoginRequest) returns(LoginResponse);
+  rpc Logout(LogoutRequest) returns(NoBody);
+
+  rpc CreateRoom(CreateRoomRequest) returns(CreateRoomResponse);
+  rpc CanEnterRoom(CanEnterRoomRequest) returns(CanEnterRoomResponse);
+  rpc EnterRoom(EnterRoomRequest) returns(stream PokerSituation);
+  rpc LeaveRoom(LeaveRoomRequest) returns(NoBody);
+  rpc Voting(VotingRequest) returns (NoBody);
+  rpc VoteCounting(VoteCountingRequest) returns (NoBody);
+  rpc ResetRoom(ResetRoomRequest) returns(NoBody);
+}
+
+message NoBody {}
+
+message LoginRequest {
+  Login login = 1;
+}
+
+message LoginResponse {
+  Login login = 1;
+}
+
+message LogoutRequest {
+  Login login = 1;
+}
+
+message CreateRoomRequest {
+  string login_id = 1;
+}
+
+message CreateRoomResponse {
+  string room_id = 1;
+}
+
+message CanEnterRoomRequest {
+  string room_id = 1;
+  string login_id = 2;
+}
+
+message CanEnterRoomResponse {
+  bool can_enter_room = 1;
+}
+
+message EnterRoomRequest {
+  string room_id = 1;
+  string login_id = 2;
+}
+
+message LeaveRoomRequest {
+  string room_id = 1;
+  string login_id = 2;
+}
+
+message VotingRequest {
+  string room_id = 1;
+  Ballot ballot = 2;
+}
+
+message ResetRoomRequest {
+  string room_id = 1;
+  string login_id = 2;
+}
+
+message VoteCountingRequest {
+  string room_id = 1;
+  string login_id = 2;
+}
