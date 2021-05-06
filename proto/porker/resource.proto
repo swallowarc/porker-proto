@@ -45,5 +45,5 @@ message PokerSituation {
   string room_id = 1;
   string master_login_id = 2;
   RoomState state = 3;
-  repeated Ballot ballot = 4;
+  repeated Ballot ballots = 4;
 }

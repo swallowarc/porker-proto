@@ -140,7 +140,7 @@ class PokerSituation extends $pb.GeneratedMessage {
     ..aOS(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'roomId')
     ..aOS(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'masterLoginId')
     ..e<RoomState>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'state', $pb.PbFieldType.OE, defaultOrMaker: RoomState.ROOM_STATE_UNKNOWN, valueOf: RoomState.valueOf, enumValues: RoomState.values)
-    ..pc<Ballot>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'ballot', $pb.PbFieldType.PM, subBuilder: Ballot.create)
+    ..pc<Ballot>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'ballots', $pb.PbFieldType.PM, subBuilder: Ballot.create)
     ..hasRequiredFields = false
   ;
 
@@ -149,7 +149,7 @@ class PokerSituation extends $pb.GeneratedMessage {
     $core.String? roomId,
     $core.String? masterLoginId,
     RoomState? state,
-    $core.Iterable<Ballot>? ballot,
+    $core.Iterable<Ballot>? ballots,
   }) {
     final _result = create();
     if (roomId != null) {
@@ -161,8 +161,8 @@ class PokerSituation extends $pb.GeneratedMessage {
     if (state != null) {
       _result.state = state;
     }
-    if (ballot != null) {
-      _result.ballot.addAll(ballot);
+    if (ballots != null) {
+      _result.ballots.addAll(ballots);
     }
     return _result;
   }
@@ -215,6 +215,6 @@ class PokerSituation extends $pb.GeneratedMessage {
   void clearState() => clearField(3);
 
   @$pb.TagNumber(4)
-  $core.List<Ballot> get ballot => $_getList(3);
+  $core.List<Ballot> get ballots => $_getList(3);
 }
 

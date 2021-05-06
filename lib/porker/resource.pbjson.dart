@@ -81,9 +81,9 @@ const PokerSituation$json = const {
     const {'1': 'room_id', '3': 1, '4': 1, '5': 9, '10': 'roomId'},
     const {'1': 'master_login_id', '3': 2, '4': 1, '5': 9, '10': 'masterLoginId'},
     const {'1': 'state', '3': 3, '4': 1, '5': 14, '6': '.porker.RoomState', '10': 'state'},
-    const {'1': 'ballot', '3': 4, '4': 3, '5': 11, '6': '.porker.Ballot', '10': 'ballot'},
+    const {'1': 'ballots', '3': 4, '4': 3, '5': 11, '6': '.porker.Ballot', '10': 'ballots'},
   ],
 };
 
 /// Descriptor for `PokerSituation`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List pokerSituationDescriptor = $convert.base64Decode('Cg5Qb2tlclNpdHVhdGlvbhIXCgdyb29tX2lkGAEgASgJUgZyb29tSWQSJgoPbWFzdGVyX2xvZ2luX2lkGAIgASgJUg1tYXN0ZXJMb2dpbklkEicKBXN0YXRlGAMgASgOMhEucG9ya2VyLlJvb21TdGF0ZVIFc3RhdGUSJgoGYmFsbG90GAQgAygLMg4ucG9ya2VyLkJhbGxvdFIGYmFsbG90');
+final $typed_data.Uint8List pokerSituationDescriptor = $convert.base64Decode('Cg5Qb2tlclNpdHVhdGlvbhIXCgdyb29tX2lkGAEgASgJUgZyb29tSWQSJgoPbWFzdGVyX2xvZ2luX2lkGAIgASgJUg1tYXN0ZXJMb2dpbklkEicKBXN0YXRlGAMgASgOMhEucG9ya2VyLlJvb21TdGF0ZVIFc3RhdGUSKAoHYmFsbG90cxgEIAMoCzIOLnBvcmtlci5CYWxsb3RSB2JhbGxvdHM=');
