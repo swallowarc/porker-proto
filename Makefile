@@ -13,7 +13,7 @@ setup-tools:
 	flutter pub global activate protoc_plugin
 protoc:
 	rm -Rf ./${GO_PKG_PATH}/*
-	rm -Rf ./${DART_PKG_PATH}/*
+	rm -Rf ./${DART_PKG_PATH}/porker/*
 	protoc \
       ./proto/*/*.proto \
       -I./proto \
