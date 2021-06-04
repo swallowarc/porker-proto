@@ -1,7 +1,7 @@
 syntax = "proto3";
 package porker;
 
-option go_package = "porker;porker";
+option go_package = "./porker;porker";
 
 enum Violations {
   UNDEFINED_VIOLATION = 0;
