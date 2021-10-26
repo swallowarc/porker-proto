@@ -3,7 +3,7 @@
 This is porker protocol buffers.
 
 ## Related repositories
-- https://github.com/swallowarc/porker-frontend
+- https://github.com/swallowarc/porker-front
 - https://github.com/swallowarc/porker-rpc
 
 ## Getting Started
