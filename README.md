@@ -2,6 +2,8 @@
 
 This is porker protocol buffers.
 
+![system diagram](docs/system_diagram.drawio.png)
+
 ## Related repositories
 - https://github.com/swallowarc/porker-front
 - https://github.com/swallowarc/porker-rpc
