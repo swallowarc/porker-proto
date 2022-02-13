@@ -13,10 +13,11 @@ setup-tools:
 	flutter pub global activate protoc_plugin
 protoc:
 	rm -Rf ./${GO_PKG_PATH}/*
-	rm -Rf ./${DART_PKG_PATH}/porker/*
+	rm -Rf ./${DART_PKG_PATH}/*
 	protoc \
       ./proto/*/*.proto \
       -I./proto \
       --go_out ${GO_PKG_PATH}/ --go_opt paths=source_relative \
       --go-grpc_out ${GO_PKG_PATH}/ --go-grpc_opt paths=source_relative \
       --dart_out grpc:${DART_PKG_PATH}/
+	/bin/sh ./script/dartgen.sh
