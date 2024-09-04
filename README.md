@@ -1,3 +1,8 @@
+# Archived Repository
+
+This repository has been archived and is no longer maintained. Future development and updates for this project are now managed in a new repository.   
+Please visit [porker2](https://github.com/swallowarc/porker2) for the latest version and ongoing work.
+
 # porker-proto
 
 This is porker protocol buffers.
